@@ -59,7 +59,7 @@ Best ongoing coverage of post-training research as it evolves — check here for
 
 ## Project
 
-Implement PPO, DPO, and GRPO from scratch on a small LM and benchmark them against each other on the same task — see [week-by-week.md](../week-by-week.md) weeks 7–9 (Phase 2). This is the leading candidate for the technical core of the KDD paper — see [`tracks/research-paper.md`](../tracks/research-paper.md).
+Implement PPO, DPO, and GRPO from scratch on a small LM and benchmark them against each other on the same task — see [week-by-week.md](../week-by-week.md) weeks 7–9 (Phase 2). **Use a verifiable-reward task** (GRPO's whole premise needs one) — grade-school math (GSM8K-style) or a simple code-correctness task both work and are cheap to score programmatically; pick it in week 7 and keep it fixed across all three algorithms for a clean comparison. This is the leading candidate for the technical core of the KDD paper — see [`tracks/research-paper.md`](../tracks/research-paper.md) — and it's also the first half of **P4** (see [Topic 4](04-fine-tuning.md)): Phase 4 later scales whichever approach wins this comparison up via full QLoRA, rather than starting a separate fine-tuning project from scratch.
 
 ## Interview Questions
 

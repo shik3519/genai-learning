@@ -40,14 +40,15 @@ scratch.md          — quick capture: links, half-formed thoughts, todos
 1. Read `study-plan/status.md` for current week, what's done, what's stuck, confidence levels.
 2. Cross-reference `study-plan/week-by-week.md` for that week/phase's primary + secondary focus, and the standing tracks (`tracks/leetcode.md`, `tracks/ml-system-design.md`, `tracks/agentic-coding.md`).
 3. Check `study-plan/tracks/research-paper.md` for the current milestone — it doesn't have a weekly slot, so it's easy to silently drop; flag it if it looks stale.
-4. Check the last 1-2 `log/` entries for anything flagged as unresolved or "still fuzzy."
-5. Give a concrete, scoped recommendation for the session/week — not a re-statement of the whole plan. If he's behind on something from last week, say so and fold it in rather than silently advancing the calendar.
+4. Check the last 1-2 `log/` entries for anything flagged as unresolved or "still fuzzy," **and their "Time spent" totals.**
+5. **Load check:** if logged hours have run past ~20/week for 2+ weeks running, say so explicitly and propose a concrete scope cut (drop a project's polish bar, compress the paper's current milestone, etc.) rather than just handing over the next chunk of the plan as if nothing's wrong. Update `status.md`'s "Load check" section when this happens. See `study-plan/README.md`'s "Honest Load Check" for the reasoning and the two safeguards this plan is built with.
+6. Give a concrete, scoped recommendation for the session/week — not a re-statement of the whole plan. If he's behind on something from last week, say so and fold it in rather than silently advancing the calendar.
 
 ### Logging progress
 
 When told what was studied/built in a session:
 
-1. Create or update today's `log/YYYY-MM-DD.md` from `templates/log.md`.
+1. Create or update today's `log/YYYY-MM-DD.md` from `templates/log.md`, including the "Time spent" section — don't skip it, it's the input to the load check above.
 2. Update `study-plan/status.md`: current week, "what's completed," "actively working on," "where stuck," and confidence levels if they changed.
 3. Don't over-engineer this — a few honest lines beat exhaustive notes.
 

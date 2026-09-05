@@ -63,14 +63,17 @@ Nothing yet — tracking restarts here as of 2026-09-05.
 | ML System Design | | |
 
 ## Projects status
-| Project | Status | GitHub |
-|---------|--------|--------|
-| P1 — nanoGPT | Not started | |
-| P2 — RAG System | Not started | |
-| P3 — Multi-Agent Pipeline | Not started | |
-| P4 — Fine-Tuned Model | Not started | |
-| RL implementations (PPO/DPO/GRPO) | Not started | |
-| Research paper (KDD, ~Feb 2027) | Topic not yet locked | |
+| Project | Status | Polish tier | GitHub |
+|---------|--------|--------|--------|
+| P1 — nanoGPT | Not started | Full | |
+| P2 — RAG System | Not started | Full | |
+| P3 — Multi-Agent Pipeline | Not started | Functional + documented | |
+| P4 — RL-trained + QLoRA model (starts Phase 2, scales Phase 4 — one project, not two) | Not started | Functional + documented (naturally thorough via the paper) | |
+| Research paper (KDD, ~Feb 2027) | Topic not yet locked | — | |
+
+## Load check
+<!-- Filled in from templates/log.md's "Time spent" totals. If >~20 hrs/week for 2+ weeks running, flag it here and raise a scope-cut conversation rather than pushing through. See README.md's "Honest Load Check." -->
+No data yet — tracking restarts 2026-09-05.
 
 ## Recent logs
 <!-- Link your last 2-3 weekly logs here -->

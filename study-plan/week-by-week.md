@@ -73,7 +73,9 @@ Go deep on transformer architecture until you can implement and explain every co
 
 Implement PPO, DPO, and GRPO from scratch — not just read the papers or call a trainer. You know DPO conceptually from production (Amazon) and from Phase 1's primer; now build the full post-training pipeline (SFT → reward model → RL) at implementation depth. This phase likely produces the technical core of the paper if the RL angle wins out.
 
-**Active project:** RL implementations repo (PPO / DPO / GRPO on a small model) — candidate paper substance
+**Active project:** P4 begins here — RL implementations (PPO / DPO / GRPO on a small model) — candidate paper substance. Phase 4 scales the winning approach up; this isn't a separate project from that.
+
+**Pick the comparison task now, in week 7, not later:** GRPO specifically needs a *verifiable-reward* task (its whole premise), so use one for all three algorithms to keep the comparison apples-to-apples — grade-school math (GSM8K-style, correctness is checkable) or a simple code-correctness task (does it pass the test) both work well and are cheap to score. Train the week 7 reward model against this same task.
 **LeetCode:** Binary Search (weeks 7–8) → Linked Lists starts (week 9) — 5 problems/week
 **ML System Design:** semantic document search (wk6 catch-up if needed) → RAG at 10M-doc scale (wk7) → RAG eval pipeline (wk8) → customer support agent (wk9)
 **Agentic Coding:** Wk5–8 window — build a personal MCP server (see track file), running in parallel with this phase
@@ -81,7 +83,7 @@ Implement PPO, DPO, and GRPO from scratch — not just read the papers or call a
 ---
 
 ### Week 7
-**Primary — Reward Modeling + PPO:** Read [InstructGPT](https://arxiv.org/abs/2203.02155) full + [PPO paper](https://arxiv.org/abs/1707.06347) sections 1–3. Implement a reward model (small classifier head on a small LM) on a preference dataset. Implement PPO's clipped surrogate objective from scratch — even a toy RL environment first (CartPole-style) to get the mechanics right before applying to text generation.
+**Primary — Reward Modeling + PPO:** Read [InstructGPT](https://arxiv.org/abs/2203.02155) full + [PPO paper](https://arxiv.org/abs/1707.06347) sections 1–3. Implement a reward model (small classifier head on a small LM) — for the math/code task chosen above, this can just be the programmatic checker (correct/incorrect), you don't need a learned reward model unless you want to compare that too. Implement PPO's clipped surrogate objective from scratch — even a toy RL environment first (CartPole-style) to get the mechanics right before applying to text generation.
 **Secondary — LoRA/QLoRA toolchain groundwork:** [PEFT docs — LoRA quickstart](https://huggingface.co/docs/peft/quicktour). Run the LoRA example on a small model. This groundwork feeds Phase 4's full fine-tune.
 **Reading:** [rlhfbook.com](https://rlhfbook.com/) chapters on reward modeling + PPO; [PPO paper](https://arxiv.org/abs/1707.06347) — the clipping mechanism in detail
 **Optional backfill:** if the policy-gradient math feels shaky, watch [Stanford CS234](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX) lectures 1–6 (classical RL foundations — MDPs, value functions, policy gradient theorem) before continuing. Not required if PPO's mechanics already make sense.
@@ -127,30 +129,30 @@ Build multi-agent architecture using open-source tools — the open-source equiv
 ---
 
 ### Week 12
-**MCP + Polish:** Build an MCP server wrapping a real API (if you didn't already via the Agentic Coding track). Clean P3's README, architecture diagram, LangSmith trace screenshots, demo recording.
+**MCP + Wrap-up:** Build an MCP server wrapping a real API (if you didn't already via the Agentic Coding track). Write a clear P3 README with what it does and LangSmith trace screenshots — P3 is a "functional + documented" project (see the polish-bar note in README.md), so a full demo recording/architecture diagram is a bonus if time allows, not required.
 **Reading:** [MCP specification](https://modelcontextprotocol.io/introduction)
-**End of phase:** P3 live on GitHub with traces and a demo.
+**End of phase:** P3 live on GitHub, documented well enough that you can walk through it in an interview.
 
 ---
 
-## Phase 4 — Fine-Tuning End-to-End + Eval/Observability (Weeks 13–15)
+## Phase 4 — Fine-Tuning at Scale (P4 finishes) + Eval/Observability (Weeks 13–15)
 
-Full QLoRA fine-tune using the groundwork from Phase 2. Use Amazon compute here if you want a bigger base model than a single consumer GPU supports. Eval/observability run in parallel because you need them to measure whether fine-tuning worked.
+**This is P4's second half, not a new project.** Phase 2 proved you understand PPO/DPO/GRPO from scratch on a small model. Now take whichever approach won that comparison and scale it up via full QLoRA on a bigger base model, using Amazon compute where a single consumer GPU wouldn't cut it. Eval/observability run in parallel because you need them to measure whether it actually worked.
 
-**Active project:** P4 (fine-tuned model) + eval harness on P2
+**Active project:** P4 scale-up (from Phase 2) + eval harness on P2
 **LeetCode:** Graphs (weeks 13–14) → DP 1D+2D starts (week 15) — continue Hard: 3 Medium + 2 Hard/week
 **ML System Design:** fine-tuning pipeline (wk13) → recommendation system with LLMs (wk14) → LLM serving infra (wk15)
 
 ---
 
 ### Week 13
-**QLoRA Fine-Tune Run:** Full training run with Axolotl — iterate on dataset quality, LR, rank. Log with W&B. Run at least 2 configurations, including at least one at a scale your local GPU couldn't handle (Amazon compute).
+**QLoRA Fine-Tune Run:** Full training run with Axolotl, using Phase 2's winning approach (DPO or GRPO, whichever benchmarked better) — iterate on dataset quality, LR, rank. Log with W&B. Run at least 2 configurations, including at least one at a scale your local GPU couldn't handle (Amazon compute).
 **Reading:** [Axolotl config docs](https://github.com/axolotl-ai-cloud/axolotl)
 
 ---
 
 ### Week 14
-**Before/After Benchmark:** 20 test prompts, base vs fine-tuned, scored with LLM-as-judge. HF model card, push adapter to HF Hub.
+**Before/After Benchmark:** 20 test prompts, base vs fine-tuned, scored with LLM-as-judge (or the programmatic checker from Phase 2, if you kept the same verifiable-reward task at scale — even better, since it's not just vibes-based judging). HF model card, push adapter to HF Hub. **P4 done** — small-scale algorithm comparison (Phase 2) + scaled production-quality result (here), one continuous project.
 **Reading:** [LIMA paper](https://arxiv.org/abs/2305.11206) — data quality > quantity
 
 ---
@@ -158,7 +160,7 @@ Full QLoRA fine-tune using the groundwork from Phase 2. Use Amazon compute here 
 ### Week 15
 **Observability + Eval Harness:** Add Langfuse tracing to P3, prompt versioning. Build eval harness for P2 — 50 Q&A pairs, RAGAS automated, `promptfoo` regression detection.
 **Reading:** [Judging LLM-as-a-Judge](https://arxiv.org/abs/2306.05685)
-**End of phase:** P4 on HF Hub. Full eval harness on P2. All 4 projects functional.
+**End of phase:** P4 on HF Hub, documented (results table, model card). Full eval harness on P2. P3 and P4 are both "functional + documented" tier — P4 likely ends up more thoroughly written up anyway since the paper draws on the same results, but that's a byproduct of the paper work, not an extra polish pass to schedule separately.
 
 ---
 
@@ -179,7 +181,7 @@ No new projects. Deploy what exists. From week 18 the primary focus shifts to in
 ---
 
 ### Week 17
-**Primary — Production Deployment:** Dockerize P2 (FastAPI + ChromaDB + Langfuse), add LiteLLM proxy, deploy to Modal or HF Spaces. Demo GIFs for all 4 project READMEs.
+**Primary — Production Deployment:** Dockerize P2 (FastAPI + ChromaDB + Langfuse), add LiteLLM proxy, deploy to Modal or HF Spaces. Demo GIFs for P1 and P2's READMEs (the full-polish tier); P3/P4 just need their existing documentation to be current.
 **Secondary — Interview Prep:** System design questions, written up as documents in `log/`.
 **Reading:** [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
@@ -187,7 +189,7 @@ No new projects. Deploy what exists. From week 18 the primary focus shifts to in
 
 ### Week 18
 **Interview Prep — System Design:** Timed mock sessions — RAG at scale, agent with HITL, eval pipeline design, LLM serving infra, RL/post-training pipeline design (new, given Phase 2).
-**GitHub polish:** All 4 repos clean, architecture diagrams, live demo links, LinkedIn updated.
+**GitHub polish:** P1/P2 clean with architecture diagrams and live demo links; P3/P4 just need current, accurate READMEs. LinkedIn updated (P1/P2, and the paper if it's far enough along to mention).
 **Reading:** Review all 6 topic files, fill any conceptual gaps.
 
 ---

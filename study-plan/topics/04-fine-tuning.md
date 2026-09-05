@@ -55,8 +55,7 @@ The authoritative hands-on guide. Covers LoRA, QLoRA, and merging adapters.
 
 ## Project
 
-**P4 — LoRA Fine-Tuned Model + Benchmark** — see [week-by-week.md](../week-by-week.md) weeks 13–14 (groundwork in Phase 2, weeks 7–9).  
-Push the adapter to HuggingFace Hub with a model card. The before/after benchmark is the portfolio piece.
+**P4 — RL-Trained + QLoRA Fine-Tuned Model + Benchmark.** This is one continuous project across two phases, not two separate ones: Phase 2 (weeks 7–9, see [Topic 6](06-post-training-rl.md)) implements PPO/DPO/GRPO from scratch on a small model and picks a winner; this phase (weeks 13–14) scales that winning approach up via full QLoRA on a bigger base model, using Amazon compute if local GPU is limiting. Push the adapter to HuggingFace Hub with a model card — the before/after benchmark, ideally on the same verifiable-reward task used in Phase 2, is the portfolio piece.
 
 ## Interview Questions
 

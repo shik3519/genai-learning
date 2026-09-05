@@ -54,12 +54,14 @@ Each week runs a **primary** (deeper) and **secondary** (lighter) GenAI track, p
 | Phase | Weeks | Primary | Secondary | Project(s) |
 |-------|-------|---------|-----------|------------|
 | 1 | 1–6 | Transformer Internals | Retrieval/RAG SOTA (dual-encoder → cross-encoder → hybrid → late-interaction) — **runs in parallel from week 1**, feeds the Amazon retrieval project | nanoGPT + Production RAG system |
-| 2 | 7–9 | Post-Training & RL Deep — implement PPO, DPO, GRPO from scratch | Light LoRA/QLoRA toolchain groundwork | RL implementations (likely paper substance) |
-| 3 | 10–12 | Agentic AI (deep, multi-agent + MCP) | — | Multi-agent pipeline |
-| 4 | 13–15 | Fine-Tuning (full QLoRA run) | Eval + Observability | Fine-tuned model + eval harness |
+| 2 | 7–9 | Post-Training & RL Deep — implement PPO, DPO, GRPO from scratch | Light LoRA/QLoRA toolchain groundwork | P4 begins here (small-scale RL comparison) — also candidate paper substance |
+| 3 | 10–12 | Agentic AI (deep, multi-agent + MCP) | — | Multi-agent pipeline (P3) |
+| 4 | 13–15 | Fine-Tuning at scale — take Phase 2's winning approach and scale it via QLoRA | Eval + Observability | P4 finishes here (scaled, polished) |
 | 5 | 16–19 | Production serving | Interview sprint (mocks, applications) | Deploy everything |
 
 Phase 1 used to be two sequential 4-week phases (transformer, then RAG). They're now parallel from week 1 since the RAG/retrieval depth is immediately useful for the live Amazon project — no reason to wait until week 5 for it. This also means the plan compressed from 20 → 19 weeks even after adding the new RL phase, by consolidating post-training content that used to be scattered across the old Phase 3/4 into one dedicated block.
+
+**P4 is no longer a separate project from the Phase 2 RL work** — it used to be a standalone fine-tuning project bolted onto Phase 4. Now Phase 2 builds it small (PPO/DPO/GRPO from scratch, proving you understand the algorithms) and Phase 4 scales the winning approach up via QLoRA on Amazon compute (proving you can ship it). One continuous project, not two disconnected ones — fewer READMEs to maintain, no learning lost.
 
 ---
 
@@ -70,9 +72,11 @@ Phase 1 used to be two sequential 4-week phases (transformer, then RAG). They're
 | P1 | nanoGPT from scratch | — | PyTorch |
 | P2 | Production RAG System ⭐ | Bedrock Knowledge Bases + Amazon retrieval project | FastAPI · ChromaDB · RAGAS · Langfuse |
 | P3 | Multi-Agent Research Pipeline | Strands / AgentCore | LangGraph · Tavily · LangSmith · Anthropic API |
-| P4 | LoRA Fine-Tuned Model + Benchmark | Internal fine-tuning (FLAN-T5/DPO) | HF PEFT · QLoRA · W&B · Axolotl |
+| P4 | RL-Trained + QLoRA Fine-Tuned Model + Benchmark (built Phase 2, scaled Phase 4) | Internal fine-tuning (FLAN-T5/DPO) | HF PEFT/TRL · QLoRA · W&B · Axolotl |
 
-Phase 5 = deploy + polish all four. No new project.
+**Polish bar — two tiers, not four projects held to the same standard:** P1 and P2 get the full treatment (README, architecture diagram, demo, write-up) since they're most tied to both the paper and interview-conceptual depth. P3 and P4 need to be functional and clearly documented — a demo GIF or LinkedIn post is a bonus if time allows, not a requirement. This is a deliberate scope reduction to protect the paper and standing tracks from four-way-equal-polish creep.
+
+Phase 5 = deploy + polish P1/P2, tidy up P3/P4. No new project.
 
 ---
 
@@ -118,6 +122,29 @@ Phase 5 = deploy + polish all four. No new project.
 | Diffusion models | Separate track entirely. |
 
 RLHF/PPO implementation was previously cut in favor of "know the theory, DPO wins in practice" — that's reversed now given the RL-depth goal and the paper.
+
+---
+
+## Staying Current (passive, not dedicated study time)
+
+The plan already has enough dedicated resources (Lambert, Raschka, Stanford). The risk isn't missing information, it's missing *time* — so these are meant for dead time (commute, chores), not another study block:
+
+- **[Hugging Face Daily Papers](https://huggingface.co/papers)** — 5-minute skim habit
+- **The Batch** (DeepLearning.AI newsletter) — weekly, ~5 min
+- **Simon Willison's blog** — practical engineering commentary, already cited for MCP
+- **A podcast for commute/gym** (Latent Space, Practical AI) — genuinely free time, not a new obligation
+
+---
+
+## Honest Load Check
+
+Rough weekly hours at this scope: **~15–19 hrs/week** in Phases 1–2, spiking to **~20–26 hrs/week** in weeks 10–16 once paper experiments and the LeetCode Hard ramp overlap. That's heavy on top of a full-time AS3 job — sustained overload for 6-7 weeks straight is a real burnout/abandonment risk, not a hypothetical one.
+
+Two safeguards built into the plan because of this:
+1. **`templates/log.md`'s "Time spent" section is a real signal, not decoration.** If logged hours run past ~20/week for 2+ weeks running, that's the trigger to cut scope in the next weekly check-in — not to push through on willpower. See `CLAUDE.md` for how this is wired into the weekly routine.
+2. **The paper has an explicit fallback** (see [`tracks/research-paper.md`](tracks/research-paper.md)): if a full draft isn't real by week 16-17, pivot to a workshop submission rather than let the full KDD deadline become a slow-motion miss.
+
+If you notice yourself behind, the honest move is to cut a project's polish bar or the paper's ambition — not to skip LeetCode/system-design (they directly gate interviews) or to just work more hours.
 
 ---
 

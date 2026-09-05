@@ -49,6 +49,14 @@ A quick tier-1-venue sweep of the last ~1-2 years, to sanity-check the candidate
 
 Note paper progress in the weekly `log/` entry under a dedicated line — even "no progress this week, Phase 3 crunch" is useful signal for the weekly check-in to catch drift early, since this track has no automatic weekly cadence to fall back on.
 
+## Paper craft
+
+The plan is heavy on the ML content (retrieval, RL) but writing a competitive empirical paper is its own skill — framing novelty against related work, choosing baselines, ablation design, anticipating reviewer objections. You've published 7 papers so this isn't new, but it's worth a deliberate refresher rather than assuming it'll take care of itself under deadline pressure: Simon Peyton Jones' ["How to Write a Great Research Paper"](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/) is the standard reference, ~1 hour, worth revisiting once the topic is locked (~week 6-7).
+
+## Fallback: workshop submission
+
+If a full draft isn't real by week 16-17 (the milestone table's own checkpoint), don't let the full KDD research-track deadline become a slow-motion miss. Pivot deliberately to a workshop paper instead — lower length/novelty bar, and workshops attached to KDD or adjacent venues (IR, GenAI, agents-focused) often have later or rolling deadlines. Naming this now means it's a planned decision made at week 16, not a scramble in week 19. Revisit this explicitly at the week 16-17 milestone regardless of how things are going — don't wait for it to become obviously necessary.
+
 ## Risk
 
 The known conflict is weeks 17–19: paper writing and interview-sprint prep overlap. Per the plan's earlier decision, the **job search timeline is protected** — if the two genuinely conflict in a given week, the interview sprint (mocks, applications, system design) takes the time and paper work flexes: compress the writing pass, or push polish/submission-buffer past week 19 into February rather than cutting into interview prep. Flag it in `log/` when this happens so `status.md` reflects the real trade-off, not the original plan.
