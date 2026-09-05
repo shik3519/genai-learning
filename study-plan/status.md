@@ -30,7 +30,7 @@
 ---
 
 ## Current week
-Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), starting week of 2026-09-07.
+Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), starting 2026-09-06.
 
 ## What I've completed
 Nothing yet — tracking restarts here as of 2026-09-05.
