@@ -1,0 +1,61 @@
+# Topic 2: Building with LLMs — APIs, RAG & Embeddings
+
+## Core Concepts
+
+### APIs & Prompting
+- **Chat completions:** system/user/assistant roles — how the conversation loop works
+- **Structured outputs:** JSON mode, tool schemas, `instructor` library — forcing typed responses
+- **Tool use / function calling:** how the model decides to call a function vs respond directly
+- **Streaming:** why it matters for UX; how to handle streamed chunks in FastAPI
+- **Prompt engineering:** few-shot, Chain-of-Thought, ReAct — when each helps
+- **Cost & token counting:** estimating cost before a call; prompt caching (Anthropic)
+
+### Embeddings & Vector Search
+- **Embeddings:** dense vectors encoding semantic meaning; cosine vs dot product similarity
+- **Chunking:** fixed-size, sentence-window, semantic — tradeoffs for retrieval quality
+- **Vector databases:** indexing (HNSW), approximate nearest neighbor; ChromaDB, FAISS, Weaviate
+- **Hybrid search:** BM25 (keyword) + vector (semantic) + reranking — better than either alone
+
+### RAG Pipelines
+- **RAG architecture:** load → chunk → embed → index → retrieve → augment prompt → generate
+- **Retrieval quality:** precision vs recall tradeoff; top-k selection; contextual compression
+- **RAGAS metrics:** faithfulness, answer relevancy, context recall — the eval standard
+- **Failure modes:** hallucination when retrieved context is wrong; chunk boundary issues
+
+## The One Resource
+
+**DeepLearning.AI — [Building Systems with the ChatGPT API](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/)** (free, 2hr)  
+Covers APIs, tool use, and RAG end to end. Practical and fast.
+
+**For APIs specifically:** [Anthropic API docs — tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) — the authoritative reference.
+
+## Must-Read Paper
+
+- [RAGAS](https://arxiv.org/abs/2309.15217) — the standard for evaluating RAG systems; read sections 1–3
+
+## Key Libraries
+
+| Library | Use |
+|---------|-----|
+| `anthropic` | Anthropic API client |
+| `instructor` | Structured outputs from any LLM |
+| `chromadb` | Local vector database |
+| `sentence-transformers` | Embedding models |
+| `ragas` | RAG evaluation |
+| `langfuse` | Tracing + observability |
+| `fastapi` | API serving |
+
+## Project
+
+**P2 — Production RAG System** — see [week-by-week.md](../week-by-week.md) weeks 5–8.
+
+## Interview Questions
+
+1. What is RAG and when would you use it over fine-tuning?
+2. How do you choose chunk size for a RAG system?
+3. What is hybrid search and why is it better than vector-only search?
+4. What does "faithfulness" mean in RAGAS? How do you measure it?
+5. How does function calling work — what does the model actually output?
+6. How would you reduce hallucination in a RAG system?
+7. What is prompt caching and how does it reduce cost?
+8. Design a RAG system for a 10M document corpus. What changes at that scale?

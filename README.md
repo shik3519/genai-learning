@@ -1,18 +1,20 @@
 # GenAI Learning Log
 
-This is my personal learning and research log for GenAI, LLMs, and agents.
+Personal learning log for GenAI, LLMs, and agents.
 
 ## Structure
 
-- `journal/` — daily or weekly learning logs.
-- `topics/` — long-lived notes on concepts (LLMs, RAG, agents, evaluation, etc.).
-- `projects/` — notes for hands-on experiments and mini-projects.
-- `resources/` — papers, links, and TODO reading lists.
-- `templates/` — note templates for journal entries, topics, and projects.
+```
+log/          — dated entries: what you studied, one insight, what's next
+concepts/     — evergreen notes on a topic (one file per concept)
+projects/     — one folder per project, notes + code together
+templates/    — starter files for log, concept, and project notes
+scratch.md    — quick capture: links, half-formed thoughts, todos
+```
 
 ## Workflow
 
-1. Create a new note in `journal/` each day (or week) using the journal template.
-2. When a concept seems important or recurring, create/update a note in `topics/`.
-3. For any hands-on experiment, create a note in `projects/`.
-4. Commit and push changes regularly to keep a versioned history of your learning.
+1. **During study**: dump links/thoughts into `scratch.md`. Zero friction.
+2. **After a session**: write 3-5 lines in `log/YYYY-MM-DD.md`.
+3. **Weekly (15 min)**: promote anything worth keeping from `scratch.md` into `concepts/` or `projects/`, clear the rest.
+4. **Weekly**: `git add -A && git commit -m "week of YYYY-MM-DD"`.
