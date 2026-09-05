@@ -23,8 +23,8 @@ Go deep on transformer architecture until you can implement and explain every co
 ---
 
 ### Week 1
-**Primary — Transformer Architecture:** Watch [Karpathy — Let's Build GPT](https://youtu.be/kCc8FmEb1nY) (2hr). Implement `MultiHeadAttention` and `FeedForward` blocks from scratch. Goal: be able to explain every line you wrote.
-**Secondary — HF intro + dual-encoder fundamentals:** Load GPT-2 with `transformers`, tokenize, run inference, understand `pipeline()`. Then: what embeddings actually encode — dense vectors, cosine vs dot product. This *is* a dual-encoder (bi-encoder) — same tower encodes query and doc independently, similarity is a single dot product. Embed a small doc set with `sentence-transformers`, store in ChromaDB, run basic retrieval.
+**Primary — Transformer Architecture:** Watch [Karpathy — Let's Build GPT](https://youtu.be/kCc8FmEb1nY) (2hr). Implement `MultiHeadAttention` and `FeedForward` blocks from scratch. Goal: be able to explain every line you wrote. Start [The Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) (HuggingFace, Aug 2026) as an ongoing companion through Phase 1 — not a week-1 deliverable, just start it. It's the "why" layer behind training decisions (architecture, data, debugging a real 11T-token run) that complements Karpathy's "how."
+**Secondary — Retrieval landscape survey:** Skip the HF wrapper-code intro — low-value dedicated study time, pick up `transformers`/`pipeline()` basics just-in-time whenever a task actually needs them. Instead, build a mental map of the retrieval landscape before implementing anything: sparse (BM25) → dense/dual-encoder → cross-encoder/rerankers → late-interaction (ColBERT, multi-vector) → **generative retrieval** (generate document identifiers directly instead of searching an index — new to this plan) → hybrid combinations. Read the taxonomy sections of [From Matching to Generation: A Survey on Generative IR](https://arxiv.org/abs/2404.14851) (TOIS 2025) — the one survey covering the whole landscape in one place.
 **Reading:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 **Agentic Coding:** Set up your daily-driver Claude Code workflow (see track file) and use it to scaffold the nanoGPT repo structure.
 
@@ -32,7 +32,7 @@ Go deep on transformer architecture until you can implement and explain every co
 
 ### Week 2
 **Primary — Transformer Implementation:** Complete nanoGPT — training loop, cross-entropy loss, sampling with temperature/top-k. Get it training on Shakespeare. Understand why loss goes down.
-**Secondary — Dual-encoders in depth:** How dual-encoders are trained — contrastive loss, in-batch negatives, hard negative mining. Compare a few off-the-shelf embedding models (E5, BGE, OpenAI/Voyage) on a retrieval task. Chunking strategies: fixed-size, sentence-window, semantic.
+**Secondary — Dual-encoders in depth:** Now that you have the landscape, implement the first point on it. Embed a small doc set with `sentence-transformers`, store in ChromaDB, run basic retrieval (P2 groundwork). How dual-encoders are trained — contrastive loss, in-batch negatives, hard negative mining. Compare a few off-the-shelf embedding models (E5, BGE, OpenAI/Voyage). Chunking strategies: fixed-size, sentence-window, semantic.
 **Reading:** [Attention Is All You Need](https://arxiv.org/abs/1706.03762) intro + section 3. Cross-reference with your nanoGPT implementation.
 
 ---

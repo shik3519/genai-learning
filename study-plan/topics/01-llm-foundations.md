@@ -21,6 +21,9 @@ Best resource for transformer architecture + implementation. Watch actively — 
 **Alternative/companion — Sebastian Raschka, [Build a Large Language Model From Scratch](https://sebastianraschka.com/blog/) (book)**  
 If you want a written, code-first alternative to Karpathy's video (or want both), this covers the same from-scratch implementation ground in more depth, chapter by chapter.
 
+**[The Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) — HuggingFace (Aug 2026)**  
+The real, messy story of training SmolLM3 (3B params, 11T tokens) — architecture choices, data decisions, and debugging a run they had to restart after burning 1T tokens. This is the judgment layer Karpathy's video doesn't cover: not "how attention works" but "why we made this specific architecture/data/hyperparameter call, and what broke." Read it as an ongoing companion through Phase 1, not a one-sitting resource. (There's also [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) on distributed training/GPU parallelism — optional only, since that leans into pretraining-infra depth that's deliberately out of scope for this plan.)
+
 **Nathan Lambert — [Interconnects newsletter](https://www.interconnects.ai/)**  
 Ongoing coverage of post-training research. For the implementation-depth material (RLHF, DPO, GRPO, RLVR), see [Topic 6](06-post-training-rl.md) — this week's alignment content is the conceptual primer only.
 

@@ -36,8 +36,8 @@ Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), st
 Nothing yet — tracking restarts here as of 2026-09-05.
 
 ## What I'm actively working on
-- Primary: Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1)
-- Secondary: HuggingFace intro + dual-encoder fundamentals — load GPT-2, tokenize, run inference; embed a small doc set and run basic retrieval on ChromaDB (P2 groundwork)
+- Primary: Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1); started [The Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) as an ongoing Phase 1 companion
+- Secondary: Retrieval landscape survey — sparse → dense/dual-encoder → cross-encoder → late-interaction → generative retrieval → hybrid, via the [GenIR survey](https://arxiv.org/abs/2404.14851). (HF wrapper-code intro dropped — picking up `transformers` basics just-in-time instead.)
 - Standing: LeetCode — Arrays & Hashing (5 problems this week)
 - Agentic Coding: set up daily-driver Claude Code workflow, use it to scaffold P1
 
@@ -49,7 +49,7 @@ Nothing yet — tracking restarts here as of 2026-09-05.
 |-------|------------|-------|
 | Transformer internals (implement from scratch) | | |
 | Tokenization (BPE, implement level) | | |
-| Retrieval architectures (dual-encoder, cross-encoder, ColBERT, SPLADE) | | |
+| Retrieval architectures (dual-encoder, cross-encoder, ColBERT, SPLADE, generative retrieval) | | |
 | Alignment: RLHF, DPO, scaling laws (conceptual) | | |
 | Post-training/RL implemented from scratch (PPO, DPO, GRPO) | | |
 | RAG (open-source stack: ChromaDB, RAGAS, Langfuse) | | |

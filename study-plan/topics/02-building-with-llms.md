@@ -22,6 +22,7 @@
 - **Cross-encoder:** query and document concatenated and encoded *together* through full attention, single relevance score out — architecturally just a transformer encoder with a classification head. Much more accurate (sees query-doc interaction directly) but can't be precomputed — too slow for first-stage retrieval over a large corpus. Used as a **reranker** over a dual-encoder's top-k.
 - **Late-interaction (ColBERT/ColBERTv2):** middle ground — encode query and doc into *multiple* token-level vectors (not one), compute similarity via a cheap max-sim aggregation at query time. Nearly cross-encoder accuracy at closer-to-dual-encoder speed, at the cost of much more storage (per-token vectors, not one vector/doc).
 - **Learned sparse (SPLADE):** learns sparse, interpretable term-weight vectors (extending BM25's idea with a learned model) — combines some of dense retrieval's quality with sparse retrieval's efficient inverted-index infrastructure.
+- **Generative retrieval:** a different paradigm entirely — instead of searching an index, a seq2seq model directly generates a document identifier for a query (e.g. DSI and successors). No separate index/ANN search step; retrieval *is* generation. Interesting for its different failure modes (struggles with corpus updates — the identifiers are baked into the model's weights) and as a bridge concept between retrieval and generation. Landscape-level understanding is enough here — see the [GenIR survey](https://arxiv.org/abs/2404.14851) (TOIS 2025) for the full taxonomy across sparse/dense/cross-encoder/late-interaction/generative/hybrid.
 - **Choosing for a latency/accuracy budget:** typical production pipeline is dual-encoder (or hybrid dense+sparse) for first-stage retrieval over the full corpus → cross-encoder or late-interaction reranking over a small top-k. Know how to justify this pipeline shape and what changes at different scale/latency constraints — this is the kind of question that comes up directly in retrieval-systems interviews.
 
 ### RAG Pipelines
@@ -42,6 +43,7 @@ Covers APIs, tool use, and RAG end to end. Practical and fast.
 - [RAGAS](https://arxiv.org/abs/2309.15217) — the standard for evaluating RAG systems; read sections 1–3
 - [ColBERT](https://arxiv.org/abs/2004.12832) — late-interaction retrieval; intro + architecture
 - [SPLADE](https://arxiv.org/abs/2107.05720) — learned sparse retrieval; abstract + section 2
+- [From Matching to Generation: A Survey on Generative IR](https://arxiv.org/abs/2404.14851) (TOIS 2025) — the full retrieval landscape taxonomy; read this first (week 1) before the individual architecture deep-dives below
 
 ## Key Libraries
 
