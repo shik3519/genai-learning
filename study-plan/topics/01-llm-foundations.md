@@ -18,11 +18,17 @@
 **Andrej Karpathy — [Let's Build GPT](https://youtu.be/kCc8FmEb1nY) (YouTube, 2hr)**  
 Best resource for transformer architecture + implementation. Watch actively — pause, implement, re-watch.
 
-**Nathan Lambert — [YouTube channel](https://www.youtube.com/@natolambert) + [Interconnects newsletter](https://www.interconnects.ai/)**  
-Best resource for post-training: RLHF, DPO, reward modeling, preference learning, alignment. Clearer than any paper on why the post-training pipeline works the way it does.
+**Alternative/companion — Sebastian Raschka, [Build a Large Language Model From Scratch](https://sebastianraschka.com/blog/) (book)**  
+If you want a written, code-first alternative to Karpathy's video (or want both), this covers the same from-scratch implementation ground in more depth, chapter by chapter.
+
+**Nathan Lambert — [Interconnects newsletter](https://www.interconnects.ai/)**  
+Ongoing coverage of post-training research. For the implementation-depth material (RLHF, DPO, GRPO, RLVR), see [Topic 6](06-post-training-rl.md) — this week's alignment content is the conceptual primer only.
 
 **Supplement:** [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Jay Alammar  
 Best visual explanation of attention that exists.
+
+**Stay-current (optional, ongoing):** [Stanford CS25: Transformers United](https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM) (V6, livestreamed through 2026)  
+Guest-lectured seminar tracking where transformer research is heading right now — not core curriculum, but worth skimming recent lecture titles during the paper's topic-survey milestone (weeks 1–8) for novelty ideas.
 
 ## Must-Read Papers
 

@@ -83,7 +83,8 @@ Implement PPO, DPO, and GRPO from scratch — not just read the papers or call a
 ### Week 7
 **Primary — Reward Modeling + PPO:** Read [InstructGPT](https://arxiv.org/abs/2203.02155) full + [PPO paper](https://arxiv.org/abs/1707.06347) sections 1–3. Implement a reward model (small classifier head on a small LM) on a preference dataset. Implement PPO's clipped surrogate objective from scratch — even a toy RL environment first (CartPole-style) to get the mechanics right before applying to text generation.
 **Secondary — LoRA/QLoRA toolchain groundwork:** [PEFT docs — LoRA quickstart](https://huggingface.co/docs/peft/quicktour). Run the LoRA example on a small model. This groundwork feeds Phase 4's full fine-tune.
-**Reading:** [PPO paper](https://arxiv.org/abs/1707.06347) — the clipping mechanism in detail
+**Reading:** [rlhfbook.com](https://rlhfbook.com/) chapters on reward modeling + PPO; [PPO paper](https://arxiv.org/abs/1707.06347) — the clipping mechanism in detail
+**Optional backfill:** if the policy-gradient math feels shaky, watch [Stanford CS234](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX) lectures 1–6 (classical RL foundations — MDPs, value functions, policy gradient theorem) before continuing. Not required if PPO's mechanics already make sense.
 
 ---
 
@@ -95,9 +96,9 @@ Implement PPO, DPO, and GRPO from scratch — not just read the papers or call a
 ---
 
 ### Week 9
-**Primary — GRPO + Reasoning RL:** Read the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948) (or successor) for GRPO — how it drops the value network PPO needs, why that matters for reasoning tasks. Implement GRPO from scratch on your small-LM setup from week 8; compare PPO vs DPO vs GRPO on the same task — this comparison is a strong paper figure if the RL angle is chosen.
+**Primary — GRPO + Reasoning RL:** Read the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948) (or successor) for GRPO — how it drops the value network PPO needs, why that matters for reasoning tasks. Implement GRPO from scratch on your small-LM setup from week 8; compare PPO vs DPO vs GRPO on the same task — this comparison is a strong paper figure if the RL angle is chosen. Sebastian Raschka's [Build a Reasoning Model From Scratch](https://sebastianraschka.com/blog/) is a strong hands-on companion for this week specifically.
 **Secondary — Fine-tuning prep:** Format a domain dataset (Alpaca-style) for Phase 4. Ideally something adjacent to the retrieval project or the RL comparison above.
-**Reading:** [GRPO / DeepSeek-Math paper](https://arxiv.org/abs/2402.03300) — the GRPO objective section
+**Reading:** [GRPO / DeepSeek-Math paper](https://arxiv.org/abs/2402.03300) — the GRPO objective section; skim [rlhfbook.com](https://rlhfbook.com/)'s RLVR/reasoning chapter and note that DAPO/GSPO/GFPO/CISPO exist as GRPO successors (awareness level — see [Topic 6](topics/06-post-training-rl.md))
 **End of phase:** PPO, DPO, and GRPO all implemented from scratch and benchmarked against each other on the same task. This is the phase most likely to feed the paper directly.
 
 ---

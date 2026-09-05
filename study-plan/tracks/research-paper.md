@@ -20,6 +20,17 @@ A hybrid of the two (RL-optimized retrieval/reranking — e.g., preference-tuned
 
 **Decision criteria:** what's the novel angle (not just "applying X to Y"), what data/compute do you actually have access to (Amazon compute helps here), and what's achievable to a submittable standard by ~week 16.
 
+## Landscape scan (as of September 2026)
+
+A quick tier-1-venue sweep of the last ~1-2 years, to sanity-check the candidate angles against where academia actually is right now:
+
+- **RAG + RL/reasoning fusion is hot at NeurIPS 2025** — "Chain-of-Retrieval Augmented Generation" (o1-style step-by-step retrieve-and-reason), "Improving RAG through Multi-Agent Reinforcement Learning," "DynamicRAG" (LLM-feedback-driven dynamic reranking). This validates the **hybrid angle** (RL-optimized retrieval/reranking) as a real, active area — good news for feasibility, but it also means the bar for genuine novelty there is higher than it looked a few months ago.
+- **A close precedent exists:** [Rank-K: Test-Time Reasoning for Listwise Reranking](https://arxiv.org/pdf/2505.14432) (2025) already applies reasoning-RL directly to reranking. Read this early (during the survey milestone) — if the hybrid angle is chosen, the paper needs to clearly differentiate from this, not just replicate it.
+- **Efficient/lightweight reranking is a strong, more narrowly-scoped SIGIR/EMNLP/ECIR 2025 theme** — "MICE: Minimal Interaction Cross-Encoders," "PLAID" (efficient late-interaction serving), "Efficient Re-ranking via Early Exit," block-level embedding approaches. A dedicated ECIR 2026 workshop on late-interaction/multi-vector retrieval confirms this is still very active. This is a **more scoped, lower-competition variant of the retrieval-angle** worth weighing against the broader hybrid angle — efficiency-under-constraint framings (latency budget, memory budget) tend to be easier to make a clean novelty claim around than "combine X and Y."
+- **GRPO successors are proliferating fast** (DAPO, GSPO, GFPO, CISPO, per Nathan Lambert's [rlhfbook.com](https://rlhfbook.com/) and ICML/ICLR 2025 papers) — if the pure **RL-angle** (PPO vs DPO vs GRPO comparison) is chosen, position it carefully: a from-scratch pedagogical comparison is valuable, but claiming it as *novel* research is a harder sell given how fast this specific sub-area is moving. The hybrid or retrieval-efficiency framings currently look like better bets for a genuine novelty claim within the plan's constraints.
+
+**Working recommendation given this scan:** lean toward the **retrieval-efficiency or hybrid RL+retrieval angle** over a pure RL-algorithm-comparison paper — revisit this once Phase 1's retrieval work and Phase 2's RL work are both further along (topic lock is still ~week 6–7, not now).
+
 ## Milestones
 
 | Milestone | Target week | Notes |

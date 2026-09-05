@@ -27,11 +27,24 @@
 - **What it drops:** the value network. Instead of a learned baseline, GRPO samples a *group* of completions per prompt and uses the group's mean reward as the baseline — advantage is just (reward − group mean).
 - **Why it matters for reasoning:** popularized by DeepSeek-R1/DeepSeek-Math for tasks with verifiable rewards (math correctness, code passing tests) where you can cheaply sample many completions and score them exactly, without a learned reward model at all.
 - **Tradeoff:** needs multiple samples per prompt (more inference cost per step), but removes an entire network (the value function) and its instability.
+- **RLVR (RL with Verifiable Rewards):** the umbrella term (from Lambert's Tülu 3 work) for this whole family — reward comes from programmatic verification (did the code pass? is the math answer right?) instead of a learned reward model.
+
+### The post-GRPO landscape (awareness level, not full implementation)
+GRPO successors are proliferating fast as of 2025–2026 — **DAPO, GSPO, GFPO, CISPO** each tweak stability/efficiency of the same core idea (group-relative advantage, no value network). Know that this family exists and roughly what problem each addresses (mostly: training stability at scale, or reducing variance/cost per update) — implementing all of them isn't necessary, but not knowing they exist would be a gap in an interview or in the paper's related-work section.
+
+### Inference-time scaling / reasoning effort control
+A distinct but connected 2025–2026 focus area: once a model is post-trained for reasoning (via RLVR/GRPO), how much it "thinks" at inference time becomes a lever of its own — test-time compute scaling, budget forcing, and explicit low/medium/high reasoning-effort modes. Worth knowing conceptually even though the implementation focus this phase is post-training, not serving — it connects directly to Phase 5's vLLM/serving work (reasoning effort is a cost/latency knob in production).
 
 ## The Resources
 
-**Nathan Lambert — [YouTube channel](https://www.youtube.com/@natolambert) + [Interconnects newsletter](https://www.interconnects.ai/)**
-Best ongoing coverage of post-training research — RLHF, DPO, reward modeling, and the reasoning-RL wave (GRPO and successors).
+**[rlhfbook.com](https://rlhfbook.com/) — Nathan Lambert's RLHF & Post-Training book + free course**
+The primary spine resource for this phase. Free online book (also published by Manning, July 2026) covering instruction tuning, reward modeling, rejection sampling, PPO, direct alignment algorithms (DPO family), GRPO, RLVR/reasoning, and on-policy distillation — plus a companion video course (finished as of August 2026). Use this as the main text; it's more current and complete than piecing the topic together from individual papers.
+
+**Sebastian Raschka — [Build a Reasoning Model From Scratch](https://sebastianraschka.com/) (book, June 2026)**
+Hands-on implementation companion for the GRPO/reasoning week — picks up where his "Build a Large Language Model From Scratch" leaves off. Also see his **Ahead of AI** blog posts "Categories of Inference-Time Scaling for Improved LLM Reasoning" and "How LLMs Learn Low-, Medium-, and High-Effort Reasoning Modes" for the inference-time-scaling concepts above.
+
+**Nathan Lambert — [Interconnects newsletter](https://www.interconnects.ai/)**
+Best ongoing coverage of post-training research as it evolves — check here for anything newer than the book by the time you reach this phase.
 
 **[HuggingFace TRL docs](https://huggingface.co/docs/trl)** — reference implementations for PPO, DPO, and GRPO trainers. Use these to sanity-check your from-scratch implementations, not as a substitute for writing them.
 
@@ -42,6 +55,7 @@ Best ongoing coverage of post-training research — RLHF, DPO, reward modeling, 
 - [DPO](https://arxiv.org/abs/2305.18290) — sections 3–4, the full derivation
 - [DeepSeek-Math / GRPO](https://arxiv.org/abs/2402.03300) — the GRPO objective
 - [DeepSeek-R1](https://arxiv.org/abs/2501.12948) — GRPO applied to reasoning at scale
+- [Rank-K: Test-Time Reasoning for Listwise Reranking](https://arxiv.org/pdf/2505.14432) (2025) — reasoning RL applied directly to reranking; a close precedent for the hybrid RL+retrieval paper angle, worth reading during the topic-survey milestone
 
 ## Project
 
@@ -56,3 +70,5 @@ Implement PPO, DPO, and GRPO from scratch on a small LM and benchmark them again
 5. What does GRPO remove compared to PPO, and why does that matter for reasoning tasks with verifiable rewards?
 6. What is reward hacking and how do you detect/mitigate it?
 7. How would you evaluate whether post-training actually improved the model, beyond the reward model's own score?
+8. What is RLVR, and how does it differ from classic RLHF? Name a GRPO successor (DAPO/GSPO/GFPO/CISPO) and what problem it addresses.
+9. What is inference-time/test-time compute scaling? How does it interact with what the model learned during post-training?
