@@ -52,8 +52,8 @@ The clearest engineering-focused guide on when and how to build agents. Required
 
 ## Projects
 
-- **P3 — Multi-Agent Research Pipeline** — see [week-by-week.md](../week-by-week.md) weeks 9–11
-- **MCP Server** — week 12 — wrap a real API, publish to GitHub
+- **P3 — Multi-Agent Research Pipeline** — see [week-by-week.md](../week-by-week.md) weeks 10–12
+- **MCP Server** — week 12 (or earlier, via the Agentic Coding track) — wrap a real API, publish to GitHub
 
 ## Interview Questions
 

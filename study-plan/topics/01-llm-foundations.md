@@ -32,7 +32,7 @@ Best visual explanation of attention that exists.
 
 ## Project
 
-**nanoGPT from scratch** — see [week-by-week.md](../week-by-week.md) weeks 1–2.
+**nanoGPT from scratch** — see [week-by-week.md](../week-by-week.md) weeks 1–5 (Phase 1, primary track).
 
 ## Interview Questions
 

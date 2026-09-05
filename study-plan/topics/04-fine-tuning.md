@@ -55,7 +55,7 @@ The authoritative hands-on guide. Covers LoRA, QLoRA, and merging adapters.
 
 ## Project
 
-**P4 — LoRA Fine-Tuned Model + Benchmark** — see [week-by-week.md](../week-by-week.md) weeks 13–14.  
+**P4 — LoRA Fine-Tuned Model + Benchmark** — see [week-by-week.md](../week-by-week.md) weeks 13–14 (groundwork in Phase 2, weeks 7–9).  
 Push the adapter to HuggingFace Hub with a model card. The before/after benchmark is the portfolio piece.
 
 ## Interview Questions

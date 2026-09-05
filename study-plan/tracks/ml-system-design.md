@@ -42,15 +42,15 @@ Work through these sections in order — same structure every time builds interv
 
 ---
 
-## Problem Progression (weeks 5–20)
+## Problem Progression (weeks 5–19)
 
-Start simple, increase complexity and scale each week.
+Start simple, increase complexity and scale each week. Condensed by one week versus a naive schedule (14 problems + 2 mock weeks = 16 weeks) — the two mock sessions are combined into a single week 19 alongside the LeetCode mock week.
 
 | Week | Problem | Key Skills It Tests |
 |------|---------|---------------------|
 | 5 | Design a conversational chatbot API | API design, context management, streaming |
 | 6 | Design a semantic document search system | Embeddings, vector DB, indexing at scale |
-| 7 | Design a RAG system for a 10M-document corpus | Chunking strategy, hybrid search, scaling retrieval |
+| 7 | Design a RAG system for a 10M-document corpus | Chunking strategy, hybrid search, scaling retrieval — draw on Phase 1's dual/cross-encoder work |
 | 8 | Design a RAG evaluation pipeline | Eval metrics, regression detection, human feedback loop |
 | 9 | Design a customer support agent | Agent architecture, escalation, safety, HITL |
 | 10 | Design a multi-agent research assistant | Orchestration, parallelism, failure recovery |
@@ -62,8 +62,7 @@ Start simple, increase complexity and scale each week.
 | 16 | Design a prompt management + A/B testing system | Versioning, experimentation, rollout strategy |
 | 17 | Design a real-time AI writing assistant | Streaming, low latency, caching |
 | 18 | Design a multimodal document Q&A system | Vision + text, chunking PDFs/images |
-| 19 | Mock design interview (pick any from above) | Timed, no notes, structured response |
-| 20 | Mock design interview (pick any from above) | Same |
+| 19 | Mock design interview ×2 (pick any from above) | Timed, no notes, structured response |
 
 ---
 

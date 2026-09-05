@@ -61,13 +61,13 @@ Best observability tool for the price (free self-hosted). Learn it deeply.
 
 ## Projects
 
-**Eval harness on P2 (RAG system)** — weeks 15–16:  
+**Eval harness on P2 (RAG system)** — week 15:  
 - RAGAS metrics on 50 Q&A pairs
 - LLM-as-judge scoring pipeline
 - Langfuse tracing dashboard
 - Eval script that runs on every commit
 
-**Production deployment** — weeks 17–18:  
+**Production deployment** — weeks 16–17:  
 - Dockerize P2, deploy to Modal or HF Spaces
 - Serve P4 fine-tuned model with vLLM
 

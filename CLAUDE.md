@@ -4,11 +4,14 @@ Orientation for any Claude session (interactive or the scheduled weekly routine)
 
 ## What this repo is
 
-Shikhar's personal GenAI/LLM learning log and study tracker. It exists to serve three goals at once:
+Shikhar's personal GenAI/LLM learning log and study tracker. It exists to serve four goals at once:
 
 1. **Job switch** — targeting Applied Scientist roles (Google, Meta, Anthropic, Apple, Netflix) with a mix of research depth and production/deployment ability. See `study-plan/README.md`.
-2. **Deepen expertise domain** — production LLM/agent systems (Bedrock, RAG, prompt engineering, multi-agent), building on real production experience.
-3. **Learn new skills** — close specific gaps: transformer internals at implementation depth, the open-source stack (HuggingFace, LangGraph, PEFT, vLLM, Langfuse), and LeetCode/ML system design at interview bar.
+2. **Deepen expertise domain** — push past what the day job (a retrieval-systems project at Amazon) requires: retrieval SOTA (dual-encoder, cross-encoder, late-interaction/ColBERT, SPLADE) and post-training/RL implemented from scratch (PPO, DPO, GRPO), not just used.
+3. **Learn new skills** — close specific gaps: transformer internals at implementation depth, the open-source stack (HuggingFace, LangGraph, PEFT, vLLM, Langfuse), LeetCode/ML system design at interview bar, and becoming a genuine power user of agentic coding tools.
+4. **Research paper** — submit to KDD (or an equivalent venue), deadline ~February 2027. Likely angle: bridging the Amazon retrieval work with the RL/post-training depth being built in Phase 2. See `study-plan/tracks/research-paper.md`.
+
+He has access to larger internal Amazon compute for small-scale projects — worth using for the RL and fine-tuning phases when local-GPU scale is limiting.
 
 ## Repo map
 
@@ -24,20 +27,21 @@ scratch.md          — quick capture: links, half-formed thoughts, todos
 
 ## study-plan/ — the tracking system
 
-- **`study-plan/README.md`** — the plan overview: target, timeline, 3 pillars, 5 phases, 4 portfolio projects. Changes rarely.
-- **`study-plan/week-by-week.md`** — the detailed 3-6 month roadmap (currently a 20-week plan), broken into phases and weeks with primary/secondary focus. This is the **source of what to study, in what order** — but it's a living plan, not a contract. It's fine to reorder, skip, or extend phases as real progress and priorities shift.
+- **`study-plan/README.md`** — the plan overview: target, timeline, goals, pillars, 5 phases, 4 portfolio projects. Changes rarely.
+- **`study-plan/week-by-week.md`** — the detailed 3-6 month roadmap (currently 19 weeks), broken into phases and weeks with primary/secondary focus. This is the **source of what to study, in what order** — but it's a living plan, not a contract. It's fine to reorder, skip, or extend phases as real progress and priorities shift.
 - **`study-plan/status.md`** — the **living source of truth for where things actually stand**: current week/phase, what's completed, what's actively in flight, where he's stuck, confidence levels per topic. This is the file that should always reflect reality, not the plan.
-- **`study-plan/topics/`** — reference notes per GenAI topic (foundations, building with LLMs, agentic AI, fine-tuning, eval/production).
-- **`study-plan/tracks/`** — standing tracks that run every week regardless of phase: `leetcode.md`, `ml-system-design.md`.
+- **`study-plan/topics/`** — reference notes per GenAI topic (foundations, building with LLMs + retrieval SOTA, agentic AI, fine-tuning, eval/production, post-training/RL).
+- **`study-plan/tracks/`** — standing tracks: `leetcode.md`, `ml-system-design.md` (weekly cadence), `agentic-coding.md` (ongoing, light), `research-paper.md` (milestone-based, not weekly).
 
 ## Two standing workflows
 
 ### "What should I study next?"
 
 1. Read `study-plan/status.md` for current week, what's done, what's stuck, confidence levels.
-2. Cross-reference `study-plan/week-by-week.md` for that week/phase's primary + secondary focus, and the standing tracks (`tracks/leetcode.md`, `tracks/ml-system-design.md`).
-3. Check the last 1-2 `log/` entries for anything flagged as unresolved or "still fuzzy."
-4. Give a concrete, scoped recommendation for the session/week — not a re-statement of the whole plan. If he's behind on something from last week, say so and fold it in rather than silently advancing the calendar.
+2. Cross-reference `study-plan/week-by-week.md` for that week/phase's primary + secondary focus, and the standing tracks (`tracks/leetcode.md`, `tracks/ml-system-design.md`, `tracks/agentic-coding.md`).
+3. Check `study-plan/tracks/research-paper.md` for the current milestone — it doesn't have a weekly slot, so it's easy to silently drop; flag it if it looks stale.
+4. Check the last 1-2 `log/` entries for anything flagged as unresolved or "still fuzzy."
+5. Give a concrete, scoped recommendation for the session/week — not a re-statement of the whole plan. If he's behind on something from last week, say so and fold it in rather than silently advancing the calendar.
 
 ### Logging progress
 

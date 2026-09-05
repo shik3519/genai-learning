@@ -8,13 +8,13 @@
 
 ## Two Phases
 
-### Weeks 1–8: Medium Speed (5 problems/week)
+### Weeks 1–9: Medium Speed (5 problems/week)
 Build pattern recognition and speed on Medium. You can solve these — the goal is fluency, not understanding. Time yourself: 15 min per Easy, 25 min per Medium. If you go over, note it and move on.
 
-### Weeks 9–16: Hard Ramp (3 Medium + 2 Hard per week)
+### Weeks 10–18: Hard Ramp (3 Medium + 2 Hard per week)
 Add Hard problems on the patterns that matter most for big tech: Trees, Graphs, DP. Don't skip Mediums — they keep your speed up. The Hard problems are where Google/Meta filter.
 
-### Weeks 17–20: Timed Mocks
+### Week 19: Timed Mocks
 Full 45-minute mock sessions. Mix of Medium and Hard. Do these on paper or a whiteboard when possible — it more closely mirrors the interview format. Review solutions only after the timer.
 
 ---
@@ -32,7 +32,9 @@ Full 45-minute mock sessions. Mix of Medium and Hard. Do these on paper or a whi
 | 13–14 | Graphs | Number of Islands, Clone Graph, Course Schedule, Pacific Atlantic Water Flow | Word Ladder, Alien Dictionary |
 | 15–16 | Dynamic Programming (1D + 2D) | Climbing Stairs, Coin Change, Longest Increasing Subsequence, Unique Paths | Word Break II, Edit Distance, Regular Expression Matching |
 | 17–18 | Heap + Priority Queue | Kth Largest Element, K Closest Points, Task Scheduler, Find Median Data Stream | Find Median from Data Stream (Hard) |
-| 19–20 | Timed mocks | Pick random Medium from any pattern — timed 25 min | Pick random Hard — timed 45 min |
+| 19 | Timed mocks (condensed) | Pick random Medium from any pattern — timed 25 min | Pick random Hard — timed 45 min |
+
+Note: this is one week tighter than a naive 2-weeks-per-pattern schedule would need (10 patterns × 2 = 20) — the mock phase is condensed to a single week to fit the plan's 19-week total. If a pattern needs more time, borrow from the mock week rather than the next pattern.
 
 ---
 
