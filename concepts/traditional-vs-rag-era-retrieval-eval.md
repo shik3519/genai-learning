@@ -23,4 +23,5 @@ Traditional search is a librarian pointing you to the single best book. RAG is a
 ## Related
 - [[ranking-metrics-mrr-ndcg]]
 - [[evaluating-embedding-models]]
+- [[freshstack-benchmark-creation]] — a concrete way to operationalize "coverage" via nugget-level relevance judgments
 - Source: synthesized from Benjamin Clavié's ["Stop Saying RAG Is Dead"](https://hamel.dev/notes/llm/rag/not_dead.html) series (P2: Modern IR Evals For RAG) + `study-plan/topics/02-building-with-llms.md`'s existing RAGAS coverage
