@@ -33,7 +33,7 @@ scratch.md          — quick capture: links, half-formed thoughts, todos
 - **`study-plan/topics/`** — reference notes per GenAI topic (foundations, building with LLMs + retrieval SOTA, agentic AI, fine-tuning, eval/production, post-training/RL).
 - **`study-plan/tracks/`** — standing tracks: `leetcode.md`, `ml-system-design.md` (weekly cadence), `agentic-coding.md` (ongoing, light), `research-paper.md` (milestone-based, not weekly).
 
-## Two standing workflows
+## Three standing workflows
 
 ### "What should I study next?"
 
@@ -51,6 +51,15 @@ When told what was studied/built in a session:
 1. Create or update today's `log/YYYY-MM-DD.md` from `templates/log.md`, including the "Time spent" section — don't skip it, it's the input to the load check above.
 2. Update `study-plan/status.md`: current week, "what's completed," "actively working on," "where stuck," and confidence levels if they changed.
 3. Don't over-engineer this — a few honest lines beat exhaustive notes.
+
+### Filing resource notes
+
+When told something learned from a resource (a paper, video, book chapter, talk — pasted highlights, a summary, or just a raw half-formed thought), file it into `concepts/` without asking him to format or categorize it first:
+
+1. Decide whether it fits an existing `concepts/*.md` file or needs a new one — one file per concept, using `templates/concept.md`'s structure (one-line summary, how it works, intuition, when it's used, code sketch, related). Don't force every section if there's not enough material yet; a partial file beats a padded one.
+2. Link related concepts with `[[wikilink]]` (existing convention — this is an Obsidian vault).
+3. Say where it went (new file vs. appended to an existing one) so he can find it later — never file it silently.
+4. This is separate from `log/` (dated, "what I did this session") and `status.md` (plan tracking) — concept notes are evergreen, not tied to a date or a week number.
 
 ## Weekly scheduled check-in
 
