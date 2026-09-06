@@ -21,6 +21,7 @@ Any retrieval task where relevance means more than topical similarity — style/
 **FollowIR** and **InstructIR** are the standard benchmarks here — evaluation suites for instruction-following retrieval, not models themselves. Promptriever reports gains on both (+14.3 p-MRR / +3.1 nDCG on FollowIR, +12.9 Robustness on InstructIR) — see [[ranking-metrics-mrr-ndcg]] for what those metrics mean.
 
 ## Related
+- [[bright-benchmark]] — Rank1's primary evaluation benchmark, and the sharpest example of "relevance beyond topicality"
 - [[ranking-metrics-mrr-ndcg]], [[traditional-vs-rag-era-retrieval-eval]]
 - [Rank-K: Test-Time Reasoning for Listwise Reranking](https://arxiv.org/pdf/2505.14432) (May 2025) — a distinct, later paper in the same reasoning-reranking lineage as Rank1, already flagged in `tracks/research-paper.md`'s landscape scan
 - Source: Benjamin Clavié — [P3: Optimizing Retrieval with Reasoning Models](https://hamel.dev/notes/llm/rag/p3_reasoning.html)

@@ -16,4 +16,5 @@ Like a GPA across very different classes: a model that aces the "easy," data-adj
 ## Related
 - Source: Benjamin Clavié — [P2: Modern IR Evals For RAG](https://hamel.dev/notes/llm/rag/p2-evals.html)
 - [[ranking-metrics-mrr-ndcg]] — the actual metrics MTEB's retrieval tasks report (mostly NDCG@k)
+- [[bright-benchmark]] — the starkest version of this lesson: the same top MTEB model scores 59.0 nDCG@10 on MTEB, 18.3 on BRIGHT
 - [[multi-vector-retrieval]] (once that note exists)
