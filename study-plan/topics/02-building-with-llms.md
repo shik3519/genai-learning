@@ -30,6 +30,7 @@
 - **RAG architecture:** load → chunk → embed → index → retrieve → augment prompt → generate
 - **Retrieval quality:** precision vs recall tradeoff; top-k selection; contextual compression
 - **Classic ranking metrics (pre-LLM-eval, still the retrieval-stage standard):** MRR (position of the first relevant result) and NDCG (graded relevance, discounted by rank, normalized against the ideal ranking) — see [[ranking-metrics-mrr-ndcg]] in `concepts/`. These measure retrieval quality directly; RAGAS measures generation quality on top of retrieval.
+- **Traditional search eval vs RAG-era eval:** ranking metrics alone don't transfer cleanly to RAG — a perfectly-ranked top-1 chunk can still be an insufficient answer if the real question needs synthesis across several chunks (coverage), or if near-duplicate high-scoring chunks crowd out diverse-but-relevant ones (diversity). See [[traditional-vs-rag-era-retrieval-eval]] for the full comparison — this is why RAG eval needs both retrieval-stage metrics and generation-stage metrics (RAGAS), not one or the other.
 - **RAGAS metrics:** faithfulness, answer relevancy, context recall — the eval standard for the generation stage
 - **Failure modes:** hallucination when retrieved context is wrong; chunk boundary issues
 

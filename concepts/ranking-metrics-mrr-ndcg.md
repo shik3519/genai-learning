@@ -28,4 +28,5 @@ MRR asks "how far did I have to scroll to find *an* answer?" — it's a single-a
 
 ## Related
 - [[evaluating-embedding-models]] — MTEB reports NDCG for most of its retrieval tasks
+- [[traditional-vs-rag-era-retrieval-eval]] — why these metrics aren't sufficient once generation enters the pipeline
 - Source: Benjamin Clavié — [P2: Modern IR Evals For RAG](https://hamel.dev/notes/llm/rag/p2-evals.html)
