@@ -29,7 +29,8 @@
 ### RAG Pipelines
 - **RAG architecture:** load → chunk → embed → index → retrieve → augment prompt → generate
 - **Retrieval quality:** precision vs recall tradeoff; top-k selection; contextual compression
-- **RAGAS metrics:** faithfulness, answer relevancy, context recall — the eval standard
+- **Classic ranking metrics (pre-LLM-eval, still the retrieval-stage standard):** MRR (position of the first relevant result) and NDCG (graded relevance, discounted by rank, normalized against the ideal ranking) — see [[ranking-metrics-mrr-ndcg]] in `concepts/`. These measure retrieval quality directly; RAGAS measures generation quality on top of retrieval.
+- **RAGAS metrics:** faithfulness, answer relevancy, context recall — the eval standard for the generation stage
 - **Failure modes:** hallucination when retrieved context is wrong; chunk boundary issues
 
 ## The Resources
@@ -79,7 +80,8 @@ Covers APIs, tool use, and RAG end to end. Practical and fast.
 3. What is hybrid search and why is it better than vector-only search?
 4. Dual-encoder vs cross-encoder — architecture and tradeoffs? Where does late-interaction (ColBERT) sit between them, and at what cost?
 5. What does "faithfulness" mean in RAGAS? How do you measure it?
-6. How does function calling work — what does the model actually output?
-7. How would you reduce hallucination in a RAG system?
-8. What is prompt caching and how does it reduce cost?
-9. Design a RAG system for a 10M document corpus. What changes at that scale?
+6. Define MRR and NDCG. When would you pick one over the other, and what can NDCG express that MRR can't?
+7. How does function calling work — what does the model actually output?
+8. How would you reduce hallucination in a RAG system?
+9. What is prompt caching and how does it reduce cost?
+10. Design a RAG system for a 10M document corpus. What changes at that scale?
