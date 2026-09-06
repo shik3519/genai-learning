@@ -49,7 +49,7 @@ Nothing yet — tracking restarts here as of 2026-09-05.
 |-------|------------|-------|
 | Transformer internals (implement from scratch) | | |
 | Tokenization (BPE, implement level) | | |
-| Retrieval architectures (dual-encoder, cross-encoder, ColBERT, SPLADE, generative retrieval) | | |
+| Retrieval architectures (dual-encoder, cross-encoder, multi-vector/ColBERT, SPLADE, generative retrieval) | | |
 | Alignment: RLHF, DPO, scaling laws (conceptual) | | |
 | Post-training/RL implemented from scratch (PPO, DPO, GRPO) | | |
 | RAG (open-source stack: ChromaDB, RAGAS, Langfuse) | | |
