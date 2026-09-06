@@ -55,7 +55,7 @@ Go deep on transformer architecture until you can implement and explain every co
 ### Week 5
 **Primary — nanoGPT polish:** Clean training run, push to GitHub with README. Can implement and explain every component cold. **End of primary arc for Phase 1.**
 **Secondary — SOTA / late-interaction retrieval:** ColBERT / ColBERTv2 — multi-vector, late-interaction scoring; where it sits between dual- and cross-encoders on the accuracy/speed curve. SPLADE — learned sparse retrieval. Read enough to compare tradeoffs across bi-encoder / late-interaction / cross-encoder / hybrid for a given latency budget — this is an interview favorite and directly relevant to your Amazon project.
-**Reading:** [ColBERT paper](https://arxiv.org/abs/2004.12832) intro + architecture; [SPLADE paper](https://arxiv.org/abs/2107.05720) abstract + section 2
+**Reading:** [ColBERT paper](https://arxiv.org/abs/2004.12832) intro + architecture; [SPLADE paper](https://arxiv.org/abs/2107.05720) abstract + section 2; start [Hamel Husain's "Stop Saying RAG Is Dead"](https://hamel.dev/notes/llm/rag/not_dead.html) series — ties late-interaction and reasoning-enabled retrievers together with where the field actually is right now
 **ML System Design starts:** Design a conversational chatbot API — see track file.
 
 ---
@@ -63,7 +63,7 @@ Go deep on transformer architecture until you can implement and explain every co
 ### Week 6
 **Primary — buffer / Phase 2 prep:** Re-read [RLHF/DPO papers] you covered in week 4 now that nanoGPT is done — you have a working transformer to reason about concretely. Skim [PPO paper](https://arxiv.org/abs/1707.06347) intro, no implementation yet (that's Phase 2).
 **Secondary — RAGAS Evaluation + wrap-up:** Add evaluation harness to P2: 30 Q&A pairs, RAGAS faithfulness + answer relevancy + context recall automated. Add Langfuse tracing. Write P2's GitHub README with an explicit comparison table (dual-encoder vs cross-encoder vs hybrid vs late-interaction) tying back to your Amazon retrieval work. **P2 done.**
-**Reading:** [RAGAS paper](https://arxiv.org/abs/2309.15217) sections 1–3
+**Reading:** [RAGAS paper](https://arxiv.org/abs/2309.15217) sections 1–3; finish the "Stop Saying RAG Is Dead" series — its point on evaluating coverage/diversity rather than just RAGAS-style single-answer metrics is directly relevant to this week's eval harness
 **Research Paper:** Target topic lock by end of this week or next — see track file. Retrieval SOTA work this phase should directly inform the decision.
 **End of phase:** nanoGPT on GitHub. P2 (Production RAG System) live with RAGAS scores and a retrieval-architecture comparison. Both explainable cold in an interview.
 

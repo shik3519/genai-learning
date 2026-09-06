@@ -31,10 +31,13 @@
 - **RAGAS metrics:** faithfulness, answer relevancy, context recall — the eval standard
 - **Failure modes:** hallucination when retrieved context is wrong; chunk boundary issues
 
-## The One Resource
+## The Resources
 
 **DeepLearning.AI — [Building Systems with the ChatGPT API](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/)** (free, 2hr)  
 Covers APIs, tool use, and RAG end to end. Practical and fast.
+
+**Hamel Husain — [Stop Saying RAG Is Dead](https://hamel.dev/notes/llm/rag/not_dead.html)** (7-post series)  
+Directly relevant to this phase's retrieval-SOTA arc: argues the future of RAG is better retrieval, not bigger context windows, and covers exactly the things this plan is building toward — late-interaction (ColBERT) preserving token-level detail, reasoning-enabled retrievers, why naive single-vector search loses information, "context rot" (performance degradation with longer inputs), and evaluation that measures coverage/diversity rather than naive IR metrics. Read alongside week 5-6's SOTA/eval work.
 
 **For APIs specifically:** [Anthropic API docs — tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) — the authoritative reference.
 
