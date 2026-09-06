@@ -37,7 +37,7 @@ Nothing yet — tracking restarts here as of 2026-09-05.
 
 ## What I'm actively working on
 - Primary: Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1); started [The Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) as an ongoing Phase 1 companion
-- Secondary: Retrieval landscape survey — sparse → dense/dual-encoder → cross-encoder → late-interaction → generative retrieval → hybrid, via the [GenIR survey](https://arxiv.org/abs/2404.14851). (HF wrapper-code intro dropped — picking up `transformers` basics just-in-time instead.)
+- Secondary: Retrieval landscape survey — sparse → dense/dual-encoder → cross-encoder → late-interaction → hybrid, via [Clavié's "Stop Saying RAG Is Dead" P1](https://hamel.dev/notes/llm/rag/p1-intro.html) (established approaches first — GenIR survey demoted to optional/generative-retrieval-specific per feedback that it was too generative-focused for a landscape overview). Flagged for deeper follow-up from the P1 slides: ColBERT/late-interaction (full week 5) and multimodal retrieval (landscape-level). (HF wrapper-code intro dropped — picking up `transformers` basics just-in-time instead.)
 - Standing: LeetCode — Arrays & Hashing (5 problems this week)
 - Agentic Coding: set up daily-driver Claude Code workflow, use it to scaffold P1
 

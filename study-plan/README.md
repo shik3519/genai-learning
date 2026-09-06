@@ -118,7 +118,7 @@ Phase 5 = deploy + polish P1/P2, tidy up P3/P4. No new project.
 | Pretraining from scratch | Hundreds of GPUs. Not a job skill. |
 | Kubernetes / MLOps infra | Learn it on the job. |
 | Mamba, RWKV, custom architectures | Only if joining a research lab. |
-| Multimodal | Additive after you have the core. |
+| Multimodal (generation, full capability) | Additive after you have the core. **Exception:** multimodal *retrieval* (CLIP-style cross-modal dual-encoders) gets landscape-level coverage in week 5 — it's the same dual-encoder idea already being implemented, not new scope, and came up as a specific interest. Implementation stays out of scope. |
 | Diffusion models | Separate track entirely. |
 
 RLHF/PPO implementation was previously cut in favor of "know the theory, DPO wins in practice" — that's reversed now given the RL-depth goal and the paper.
