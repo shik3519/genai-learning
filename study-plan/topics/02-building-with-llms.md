@@ -21,6 +21,7 @@
   - Trained with contrastive loss: in-batch negatives, hard negative mining matter a lot for quality.
 - **Cross-encoder:** query and document concatenated and encoded *together* through full attention, single relevance score out — architecturally just a transformer encoder with a classification head. Much more accurate (sees query-doc interaction directly) but can't be precomputed — too slow for first-stage retrieval over a large corpus. Used as a **reranker** over a dual-encoder's top-k.
 - **Multi-vector retrieval:** the general idea of representing a query/doc with *several* vectors instead of one, to avoid compressing everything into a single embedding. **Late-interaction (ColBERT/ColBERTv2)** is the most prominent instance — token-level vectors, similarity via a cheap max-sim aggregation at query time — middle ground between dual- and cross-encoders: nearly cross-encoder accuracy at closer-to-dual-encoder speed, at the cost of much more storage (per-token vectors, not one vector/doc). Other multi-vector strategies exist (e.g. poly-encoders, which use a fixed small number of context vectors rather than one-per-token) trading off storage/speed differently — ColBERT-style late-interaction is the one worth going deep on given where the field's attention is.
+- **Modern late-interaction (ModernBERT, ModernColBERT, PyLate):** ColBERT's original backbone was 2018-era BERT — ModernBERT (RoPE, 8K context, Flash Attention) gives a direct upgrade path, and ModernColBERT variants built on it beat much larger models. The two open problems are storage (hierarchical pooling, quantization) and whether MaxSim is even the best scoring function (learnable late-interaction functions). **PyLate** is the practical library to actually build/train/serve one of these, not just read the paper. See [[modern-late-interaction-models]] in `concepts/` — use it for this phase's hands-on late-interaction work.
 - **Learned sparse (SPLADE):** learns sparse, interpretable term-weight vectors (extending BM25's idea with a learned model) — combines some of dense retrieval's quality with sparse retrieval's efficient inverted-index infrastructure.
 - **Generative retrieval:** a different paradigm entirely — instead of searching an index, a seq2seq model directly generates a document identifier for a query (e.g. DSI and successors). No separate index/ANN search step; retrieval *is* generation. Interesting for its different failure modes (struggles with corpus updates — the identifiers are baked into the model's weights) and as a bridge concept between retrieval and generation. Landscape-level understanding is enough here — see the [GenIR survey](https://arxiv.org/abs/2404.14851) (TOIS 2025) for the full taxonomy of this specific paradigm; it's not a good general retrieval-landscape resource (see below), it's specifically deep on generative retrieval.
 - **Multimodal retrieval (landscape-level):** the dual-encoder idea generalizes across modalities — CLIP trains an image tower and a text tower with the same contrastive, in-batch-negative objective as a text-only dual-encoder, so similarity search works across text↔image. This stays conceptual for this plan (broader multimodal work is out of scope per the plan's cuts), but it's worth knowing the architecture is the same idea you're already implementing, just paired towers over different modalities.
@@ -59,6 +60,7 @@ Covers APIs, tool use, and RAG end to end. Practical and fast.
 - [SPLADE](https://arxiv.org/abs/2107.05720) — learned sparse retrieval; abstract + section 2
 - [CLIP](https://arxiv.org/abs/2103.00020) — cross-modal dual-encoder; abstract + architecture (multimodal retrieval, landscape-level)
 - [Promptriever](https://arxiv.org/abs/2409.11136) and [Rank1](https://arxiv.org/abs/2502.18418) — instruction-based/reasoning retrievers; [BRIGHT](https://arxiv.org/abs/2407.12883) — their reasoning-intensive eval benchmark
+- [ModernBERT](https://arxiv.org/abs/2412.13663) — the backbone ModernColBERT builds on; [PyLate](https://arxiv.org/pdf/2508.03555) — the practical late-interaction training/serving library
 - [From Matching to Generation: A Survey on Generative IR](https://arxiv.org/abs/2404.14851) (TOIS 2025) — optional, deep dive specifically on generative retrieval (not a general landscape survey — use the Clavié series above for that)
 
 ## Key Libraries
@@ -70,6 +72,7 @@ Covers APIs, tool use, and RAG end to end. Practical and fast.
 | `chromadb` | Local vector database |
 | `sentence-transformers` | Embedding models |
 | `ragas` | RAG evaluation |
+| `pylate` | Late-interaction (ColBERT-style) training/serving |
 | `langfuse` | Tracing + observability |
 | `fastapi` | API serving |
 
