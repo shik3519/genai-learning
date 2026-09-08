@@ -14,7 +14,7 @@
 
 Go deep on transformer architecture until you can implement and explain every component under pressure. **In true parallel from week 1** (not sequenced after), build retrieval/RAG depth — dual-encoders, cross-encoders, hybrid search, late-interaction — directly useful for your Amazon retrieval project now, not in a month.
 
-**Active projects:** P1 (nanoGPT from scratch — type every line, no copy-paste) + P2 (Production RAG System, built incrementally across all 6 weeks)
+**Active projects:** P1 (nanoGPT from scratch — type every line, no copy-paste) + P2 (Production RAG System, built incrementally across all 6 weeks). **P2's detailed implementation plan — dataset, methods, metrics, three staged experiments building toward the paper — is in [`projects/mini-rag-bot/notes.md`](../projects/mini-rag-bot/notes.md); the weekly notes below are the pacing, that file is the how.**
 **LeetCode:** Arrays & Hashing (weeks 1–2) → Two Pointers + Sliding Window (weeks 3–4) → Stack & Queue (weeks 5-6) — 5 problems/week
 **ML System Design:** Not yet — starts week 5
 **Agentic Coding:** Wk1–2 daily-driver fundamentals, applied to bootstrapping P1 — see track file
