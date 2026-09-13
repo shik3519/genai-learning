@@ -29,3 +29,5 @@
 ## Why this is worth dedicated attention
 
 You're job-switching into roles that will expect fluency with these tools, and every project in this plan (nanoGPT, RAG, multi-agent, fine-tuning, the paper itself) is a real opportunity to build that fluency instead of treating it as a separate thing to "study."
+
+**The concrete evidence this isn't just convenience:** see [[agent-harnesses]] in `concepts/` — the same model weights scored 30% vs 95%+ on ARC-AGI purely based on harness quality (YC Paper Club, Sept 2026). Harness engineering can be a bigger performance lever than the underlying model. That's the actual reason this track exists as a first-class thread in the plan, not just a nice-to-have.

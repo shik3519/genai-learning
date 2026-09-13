@@ -30,20 +30,22 @@
 ---
 
 ## Current week
-Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), week of 2026-09-07. Carried forward, not advanced — no `log/` entry yet covers Week 1's work.
+Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), now on day 6-7. Not advancing to Week 2 yet — primary (nanoGPT) hasn't meaningfully started, LeetCode hasn't started, and no hands-on retrieval implementation has happened. See `log/2026-09-13.md`.
 
 ## What I've completed
-Nothing yet — tracking restarts here as of 2026-09-05.
+- Secondary (reading): all of Clavié's "Stop Saying RAG Is Dead" series, P1 through P5 — full retrieval landscape, evals, reasoning-based retrieval, late-interaction, multi-representation
+- Ahead of schedule: Sebastian Raschka's *Build a Reasoning Model From Scratch*, first 2 videos (this is Phase 2 content, weeks 7-9)
+- YC Paper Club's "Why The Harness Matters More Than The Model" — filed as [[agent-harnesses]]
+- Nothing built/coded yet on any track (see the pattern note below)
 
 ## What I'm actively working on
-- Note (weekly check-in, 2026-09-07): first scheduled check-in since tracking restarted — no log entry exists yet for Week 1, so this carries the same focus forward rather than advancing to Week 2. Log the week's session(s) (with "Time spent") when done so the next check-in can advance normally.
-- Primary: Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1); started [The Smol Training Playbook](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) as an ongoing Phase 1 companion
-- Secondary: Retrieval landscape survey — sparse → dense/dual-encoder → cross-encoder → late-interaction → hybrid, via [Clavié's "Stop Saying RAG Is Dead" P1](https://hamel.dev/notes/llm/rag/p1-intro.html) (established approaches first — GenIR survey demoted to optional/generative-retrieval-specific per feedback that it was too generative-focused for a landscape overview). Flagged for deeper follow-up from the P1 slides: ColBERT/late-interaction (full week 5) and multimodal retrieval (landscape-level). (HF wrapper-code intro dropped — picking up `transformers` basics just-in-time instead.)
-- Standing: LeetCode — Arrays & Hashing (5 problems this week)
-- Agentic Coding: set up daily-driver Claude Code workflow, use it to scaffold P1
+- **Priority — this is genuinely behind:** Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1). Started but barely covered. A week of heavy reading/watching hasn't yet produced any code — worth prioritizing this over consuming further new resources (including continuing further into Raschka's book, which is Phase 2 material anyway) until Week 1's actual deliverable lands.
+- Secondary: retrieval landscape reading is now fully done (P1-P5) — next is Stage 1 of the comparison experiment (BM25 + dual-encoder on SciFact, see `projects/mini-rag-bot/notes.md`), not more reading.
+- Standing: LeetCode — Arrays & Hashing (5 problems), not started
+- Agentic Coding: daily-driver Claude Code workflow setup, not started
 
 ## Where I'm stuck or fuzzy
-<!-- Be specific — "I understand attention conceptually but can't implement scaled dot-product from scratch" is more useful than "attention" -->
+Nothing identified yet — haven't gotten deep enough into implementation on any track to know where the real sticking points are. That's exactly why the primary/hands-on work needs to happen next, not more reading.
 
 ## Confidence levels (1–5)
 | Topic | Confidence | Notes |
@@ -73,11 +75,10 @@ Nothing yet — tracking restarts here as of 2026-09-05.
 | Research paper (KDD, ~Feb 2027) | Topic not yet locked | — | |
 
 ## Load check
-<!-- Filled in from templates/log.md's "Time spent" totals. If >~20 hrs/week for 2+ weeks running, flag it here and raise a scope-cut conversation rather than pushing through. See README.md's "Honest Load Check." -->
-No data yet — tracking restarts 2026-09-05. No `log/` entries with "Time spent" totals exist since the restart, so nothing to check yet.
+Week 1 (partial, days 1-6): ~4 hrs total, well under the ~15-19 hr/week baseline — not an overload week, the opposite. The thing to watch isn't hours, it's the split: ~4 hrs of reading/watching, 0 hrs building. The plan's whole ethos (nanoGPT "type every line," landscape-then-build for retrieval) is implementation-first — a light week that's all consumption and no production is a different problem than an overloaded one, and the fix is the same either way: prioritize hands-on work over new resources next session.
 
 ## Recent logs
-<!-- Link your last 2-3 weekly logs here -->
+- [2026-09-13](../log/2026-09-13.md)
 
 ## What I want to focus on next (optional)
 <!-- Leave blank for a cold recommendation based on the above -->
