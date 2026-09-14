@@ -30,7 +30,7 @@
 ---
 
 ## Current week
-Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), now on day 6-7. Not advancing to Week 2 yet — primary (nanoGPT) hasn't meaningfully started, LeetCode hasn't started, and no hands-on retrieval implementation has happened. See `log/2026-09-13.md`.
+Week 1 (carried forward) — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel). Week of Sept 14–20. Still not advancing to Week 2 — the 09-13 log (days 1-6) shows nanoGPT barely started, LeetCode not started, no hands-on retrieval implementation (Stage 1 BM25/dual-encoder experiment) done, and agentic-coding daily-driver setup not done. Same Week 1 deliverables carry forward, now with a full week's runway instead of a day 6-7 partial. See `log/2026-09-13.md`.
 
 ## What I've completed
 - Secondary (reading): all of Clavié's "Stop Saying RAG Is Dead" series, P1 through P5 — full retrieval landscape, evals, reasoning-based retrieval, late-interaction, multi-representation
@@ -39,10 +39,12 @@ Week 1 — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel), no
 - Nothing built/coded yet on any track (see the pattern note below)
 
 ## What I'm actively working on
-- **Priority — this is genuinely behind:** Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1). Started but barely covered. A week of heavy reading/watching hasn't yet produced any code — worth prioritizing this over consuming further new resources (including continuing further into Raschka's book, which is Phase 2 material anyway) until Week 1's actual deliverable lands.
-- Secondary: retrieval landscape reading is now fully done (P1-P5) — next is Stage 1 of the comparison experiment (BM25 + dual-encoder on SciFact, see `projects/mini-rag-bot/notes.md`), not more reading.
-- Standing: LeetCode — Arrays & Hashing (5 problems), not started
-- Agentic Coding: daily-driver Claude Code workflow setup, not started
+- **Priority — carried over again, now the most urgent item:** Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1). Two calendar weeks in with no code written yet — hold off on any further new resources (including Raschka's book, which is Phase 2 material anyway) until this actually lands.
+- Secondary: retrieval landscape reading is done (P1-P5) — next concrete step is Stage 1 of the comparison experiment (BM25 + dual-encoder on SciFact, see `projects/mini-rag-bot/notes.md`), not more reading.
+- Standing: LeetCode — Arrays & Hashing (5 problems), still not started.
+- Agentic Coding: daily-driver Claude Code workflow setup, still not started — meant to scaffold P1, not follow it, so pair it with the nanoGPT push rather than sequencing after.
+- ML System Design: not yet — starts week 5, no action needed.
+- Research paper: not stale — still inside its week 1-6 survey/lit-review milestone, and this week's retrieval reading (Clavié P1-P5) already doubles as groundwork for the week 6-7 topic-lock decision.
 
 ## Where I'm stuck or fuzzy
 Nothing identified yet — haven't gotten deep enough into implementation on any track to know where the real sticking points are. That's exactly why the primary/hands-on work needs to happen next, not more reading.
@@ -75,7 +77,7 @@ Nothing identified yet — haven't gotten deep enough into implementation on any
 | Research paper (KDD, ~Feb 2027) | Topic not yet locked | — | |
 
 ## Load check
-Week 1 (partial, days 1-6): ~4 hrs total, well under the ~15-19 hr/week baseline — not an overload week, the opposite. The thing to watch isn't hours, it's the split: ~4 hrs of reading/watching, 0 hrs building. The plan's whole ethos (nanoGPT "type every line," landscape-then-build for retrieval) is implementation-first — a light week that's all consumption and no production is a different problem than an overloaded one, and the fix is the same either way: prioritize hands-on work over new resources next session.
+Wk1: ~4 hrs (days 1-6, from `log/2026-09-13.md`), on track / under the ~15-19 hr/week baseline — no overload signal, if anything the opposite. Only one log entry has real data so far; `log/2026-05-07.md` is an empty unused template predating this plan, not a second real data point, so there's nothing to trend yet. The thing still worth watching isn't hours, it's the split: ~4 hrs of reading/watching, 0 hrs building. Re-check once this week's log lands.
 
 ## Recent logs
 - [2026-09-13](../log/2026-09-13.md)
