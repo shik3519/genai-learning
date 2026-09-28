@@ -30,7 +30,7 @@
 ---
 
 ## Current week
-Week 1 (carried forward — 3rd calendar week running) — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel). Week of Sept 21–27. Not advancing to Week 2: there is no log entry at all for the week of Sept 14–20 — the most recent log is still `log/2026-09-13.md` (days 1-6 of week 1). With no entry to show otherwise, none of Week 1's deliverables can be assumed to have moved: nanoGPT `MultiHeadAttention`/`FeedForward` still not started, LeetCode Arrays & Hashing still not started, the Stage 1 retrieval experiment (BM25 + dual-encoder on SciFact) still not started, agentic-coding daily-driver setup still not done. Same Week 1 deliverables carry forward again.
+Week 1 (carried forward — 4th calendar week running) — Phase 1 (Transformer Internals + Retrieval/RAG SOTA, in parallel). Week of Sept 28–Oct 4. Not advancing to Week 2: there is still no log entry for the week of Sept 14–20 or Sept 21–27 — the most recent log remains `log/2026-09-13.md` (days 1-6 of week 1). With no entry to show otherwise, none of Week 1's deliverables can be assumed to have moved: nanoGPT `MultiHeadAttention`/`FeedForward` still not started, LeetCode Arrays & Hashing still not started, the Stage 1 retrieval experiment (BM25 + dual-encoder on SciFact) still not started, agentic-coding daily-driver setup still not done. Same Week 1 deliverables carry forward again — this is now the third consecutive weekly check-in with nothing new to show.
 
 ## What I've completed
 - Secondary (reading): all of Clavié's "Stop Saying RAG Is Dead" series, P1 through P5 — full retrieval landscape, evals, reasoning-based retrieval, late-interaction, multi-representation
@@ -39,13 +39,13 @@ Week 1 (carried forward — 3rd calendar week running) — Phase 1 (Transformer 
 - Nothing built/coded yet on any track (see the pattern note below)
 
 ## What I'm actively working on
-- **Priority — carried over again, now the most urgent item:** Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1). Three calendar weeks in with no code written yet — hold off on any further new resources (including Raschka's book, which is Phase 2 material anyway) until this actually lands.
+- **Priority — carried over a third time, now the most urgent item by far:** Karpathy "Let's Build GPT" + implementing `MultiHeadAttention`/`FeedForward` from scratch (nanoGPT, P1). Four calendar weeks in with no code written yet — hold off on any further new resources (including Raschka's book, which is Phase 2 material anyway) until this actually lands. If this doesn't move by the next check-in, worth naming explicitly as a scope/re-planning conversation rather than carrying it forward a fourth time.
 - Secondary: retrieval landscape reading is done (P1-P5) — next concrete step is Stage 1 of the comparison experiment (BM25 + dual-encoder on SciFact, see `projects/mini-rag-bot/notes.md`), not more reading.
 - Standing: LeetCode — Arrays & Hashing (5 problems), still not started.
 - Agentic Coding: daily-driver Claude Code workflow setup, still not started — meant to scaffold P1, not follow it, so pair it with the nanoGPT push rather than sequencing after.
 - ML System Design: not yet — starts week 5, no action needed.
-- Research paper: not flagged as stale yet — still inside its week 1-6 survey/lit-review milestone, and the Clavié P1-P5 reading already logged doubles as groundwork for the week 6-7 topic-lock decision. But it's riding on the same general inactivity as everything else below — a topic still needs to actually get locked by week 6-7 regardless of how the calendar weeks get relabeled.
-- **Logging gap:** no log entry exists for the week of Sept 14–20 — the "logging progress" workflow wasn't followed that week, so there's no record of what happened (if anything). Worth logging even a "did nothing this week" entry going forward, since the load check and this weekly recommendation both depend on that data existing.
+- Research paper: not flagged as stale on content yet — still inside its week 1-6 survey/lit-review milestone, and the Clavié P1-P5 reading already logged doubles as groundwork for the week 6-7 topic-lock decision. But it's riding on the same general inactivity as everything else below, and the week 6-7 topic-lock milestone is getting closer in calendar time than the stalled Week 1 progress suggests — worth a straight look at whether ~week 6-7 (in plan-weeks) is still realistic given four calendar weeks have produced one week of plan progress.
+- **Logging gap, now spanning two full weeks:** no log entry exists for either the week of Sept 14–20 or Sept 21–27 — the "logging progress" workflow hasn't been followed since Sept 13. There's no record of what happened (if anything) in either week. Worth logging even a "did nothing this week" entry going forward, since the load check and this weekly recommendation both depend on that data existing.
 
 ## Where I'm stuck or fuzzy
 Nothing identified yet — haven't gotten deep enough into implementation on any track to know where the real sticking points are. That's exactly why the primary/hands-on work needs to happen next, not more reading.
@@ -78,7 +78,7 @@ Nothing identified yet — haven't gotten deep enough into implementation on any
 | Research paper (KDD, ~Feb 2027) | Topic not yet locked | — | |
 
 ## Load check
-No new log entry since `log/2026-09-13.md` (days 1-6 of week 1, ~4 hrs total, all reading/watching), so there's still nothing new to sum — same single real data point as last check-in (`log/2026-05-07.md` remains an empty unused template, not a data point). Hours are not the concern here; if anything it's the opposite of overload — the risk is near-zero engagement, not too much. Re-check once an entry covering the Sept 14-27 window lands.
+Still no new log entry since `log/2026-09-13.md` (days 1-6 of week 1, ~4 hrs total, all reading/watching) — same single real data point as the last two check-ins (`log/2026-05-07.md` remains an empty unused template, not a data point). Hours are not the concern here; if anything it's the opposite of overload — the risk is near-zero engagement, not too much, and it's now persisted long enough (two full unlogged weeks, ~4 calendar weeks against 1 plan-week of progress) that it's worth treating as a signal in its own right rather than just re-checking again next week. Re-check once an entry covering the Sept 14–Oct 4 window lands.
 
 ## Recent logs
 - [2026-09-13](../log/2026-09-13.md)
